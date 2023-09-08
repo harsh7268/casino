@@ -38,7 +38,7 @@ const AdminPanel = () => {
    });
 
  useEffect(() => {
-   fetch("http://localhost:8081/showAdmin")
+   fetch(`${process.env}/showAdmin`)
      .then((res) => res.json())
      .then((data) => {
        setData(data);
@@ -117,7 +117,7 @@ const AdminPanel = () => {
      // Added console log
 
       const response = await axios.post(
-        "http://localhost:8081/update",
+        `${process.env}/update`,
         JSON.stringify(requestData),
         {
           headers: {
