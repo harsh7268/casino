@@ -31,7 +31,7 @@ const Test = () => {
   };
 
   useEffect(() => {
-    fetch(`${process.env}/futuredata`)
+    fetch(`${process.env.REACT_APP_BASE_URL}/futuredata`)
       .then((res) => res.json())
       .then((data) => {
         setData(data);
